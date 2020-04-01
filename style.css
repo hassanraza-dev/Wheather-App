@@ -1,0 +1,58 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    color: white;
+    
+}
+.container
+{
+    
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 350px;
+    height: 600px;
+    background-color: navy;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+.srch-btn
+{
+    float: right;
+}
+#user-input
+{
+    border: none; 
+    border-bottom: 1px solid white;
+    background: none;
+    color: white;
+    width: 290px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+input:focus{
+    outline: none;
+}
+.srch-btn
+{
+    background-color: red;
+    border: none;
+    border-radius: 50px;
+    padding: 6px;
+    width: 40px;
+    height: 40px;
+
+}
+.data 
+{
+    margin-top:70px;
+    height: 350px;
+}
+.convert
+{
+    
+    height: 60px;
+    width: 100%;
+}
