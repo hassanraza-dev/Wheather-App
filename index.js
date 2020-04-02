@@ -4,7 +4,11 @@ var temp = document.getElementById('temp');
 var desc = document.getElementById('desc');
 var day = document.getElementById('day');
 var button= document.getElementById('btn');
-
+var kel = document.getElementById('kel');
+var fehr = document.getElementById('fehr');
+var bg = document.getElementById('bg');
+var bg2 = document.getElementById('bg2');
+input.value.toLowerCase()
 const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
 
 var dayname = new Date()
@@ -20,17 +24,41 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=5
   var nameValue = data['name'];
   var descValue = data['weather'][0]['description'];
 
-  tempValue -= 273.15;
-  tempValue = Math.floor(tempValue)
+  var cnvtempValue = tempValue - 273.15;
+  cnvtempValue = Math.floor(cnvtempValue)
 
+   var calfehr = Math.floor((cnvtempValue * 9/5) + 32)
+if(input.value == "karachi")
+{
+  bg.style.backgroundImage = "url('./img/khi.jpg')";
+  bg2.style.backgroundImage = "url('./img/khi.jpg')";
+}
+if(input.value == "paris")
+{
+  bg.style.backgroundImage = "url('./img/paris.jpg')";
+  bg2.style.backgroundImage = "url('./img/paris.jpg')";
+}
+if(input.value == "lahore")
+{
+  bg.style.backgroundImage = "url('./img/lhr.jpg')";
+  bg2.style.backgroundImage = "url('./img/lhr.jpg')";
+}
+if(input.value == "london")
+{
+  bg.style.backgroundImage = "url('./img/london.jpg')";
+  bg2.style.backgroundImage = "url('./img/london.jpg')";
+}
   main.innerHTML = nameValue;
   desc.innerHTML = descValue;
-  temp.innerHTML = tempValue + "<span>&deg;C</span>" ;
+  temp.innerHTML = cnvtempValue + "<span>&deg;C</span>" ;
   day.innerHTML = days[dayname.getDay()]
+  fehr.innerHTML = calfehr+ "<span>&deg;F</span>"
+  kel.innerHTML = tempValue + "<span>&deg;K</span>"
   input.value ="";
+  
 
 })
 
-.catch(err => alert("Pleas Enter City Name"));
+.catch(err => alert(err));
 }
 

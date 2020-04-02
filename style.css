@@ -4,8 +4,13 @@ body
     padding: 0px;
     text-align: center;
     color: white;
+    background-color: tomato;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     
 }
+
 .container
 {
     
@@ -16,6 +21,11 @@ body
     background-color: navy;
     border-radius: 20px;
     padding: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 0px 20px white;
+    
 
 }
 .srch-btn
@@ -55,4 +65,5 @@ input:focus{
     
     height: 60px;
     width: 100%;
+    padding: 12px;
 }
