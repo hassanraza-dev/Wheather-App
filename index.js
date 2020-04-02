@@ -33,20 +33,26 @@ if(input.value == "karachi")
   bg.style.backgroundImage = "url('./img/khi.jpg')";
   bg2.style.backgroundImage = "url('./img/khi.jpg')";
 }
-if(input.value == "paris")
+else if(input.value == "paris")
 {
   bg.style.backgroundImage = "url('./img/paris.jpg')";
   bg2.style.backgroundImage = "url('./img/paris.jpg')";
 }
-if(input.value == "lahore")
+ else if(input.value == "lahore")
 {
   bg.style.backgroundImage = "url('./img/lhr.jpg')";
   bg2.style.backgroundImage = "url('./img/lhr.jpg')";
 }
-if(input.value == "london")
+else if(input.value == "london")
 {
   bg.style.backgroundImage = "url('./img/london.jpg')";
   bg2.style.backgroundImage = "url('./img/london.jpg')";
+}
+else
+{
+  bg.style.backgroundImage = "url('./img/cover.jpg')";
+  bg2.style.backgroundImage = "url('./img/cover.jpg')"
+
 }
   main.innerHTML = nameValue;
   desc.innerHTML = descValue;
